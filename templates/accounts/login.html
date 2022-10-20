@@ -22,6 +22,8 @@
             {{ form.password }}
             {% comment %} <input class="form-control" type="password" placeholder="Password" /> {% endcomment %}
           </div>
+          <span class="text-danger">{{ form.username.errors }}</span>
+          <br />
           <div class="row flex-between-center">
             <div class="col-auto">
               <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="basic-checkbox" checked="checked" /><label class="form-check-label mb-0" for="basic-checkbox">Remember me</label></div>

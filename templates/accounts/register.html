@@ -41,13 +41,13 @@
               {{ form.password1 }}
               {% comment %} <input class="form-control" type="password" autocomplete="on" placeholder="Password" /> {% endcomment %}
             </div>
-            <span class="text-danger">{{ form.password1.errors }}</span>
-              <br />
+              {% comment %} <br /> {% endcomment %}
 
             <div class="mb-3 col-sm-6">
               {{ form.password2 }}
               {% comment %} <input class="form-control" type="password" autocomplete="on" placeholder="Confirm Password" /> {% endcomment %}
             </div>
+            <span class="text-danger">{{ form.password1.errors }}</span>
             <span class="text-danger">{{ form.password2.errors }}</span>
             <br />
 

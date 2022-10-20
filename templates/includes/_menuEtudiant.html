@@ -10,7 +10,7 @@
     <!--begin:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href="online-courses.html">
+        <a class="menu-link" href="{% url 'dashboardEtudiant' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
                 <span class="svg-icon svg-icon-2">
@@ -31,7 +31,7 @@
     <!--begin:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href="../account/overview.html">
+        <a class="menu-link" href="{% url 'profil' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
                 <span class="svg-icon svg-icon-2">
@@ -52,7 +52,7 @@
     <!--begin:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href=" ../pages/user-profile/documents.html">
+        <a class="menu-link" href=" {% url 'mes_cours' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
                 <span class="svg-icon svg-icon-2">
@@ -71,7 +71,7 @@
     <!--begin:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href=" school.html">
+        <a class="menu-link" href="{% url 'mes_objectifs' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/general/gen022.svg-->
                 <span class="svg-icon svg-icon-2">
@@ -92,7 +92,7 @@
     <!--begin:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href="#">
+        <a class="menu-link" href="{% url 'aide' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/general/gen022.svg-->
                 <span class="svg-icon svg-icon-3">
@@ -111,7 +111,7 @@
     <!--begin:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href="../pages/contact.html">
+        <a class="menu-link" href="{% url 'contact' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
                 <span class="svg-icon svg-icon-2">
@@ -129,7 +129,7 @@
     <!--end:Menu item-->
     <div class="menu-item">
         <!--begin:Menu link-->
-        <a class="menu-link" href="../apps/calendar.html">
+        <a class="menu-link" href="{% url 'calendrier' %}">
             <span class="menu-icon">
                 <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
                 <span class="svg-icon svg-icon-2">
@@ -170,7 +170,7 @@
             <!--begin:Menu item-->
             <div class="menu-item">
                 <!--begin:Menu link-->
-                <a class="menu-link" href="../apps/chat/private.html">
+                <a class="menu-link" href="{% url 'discussionPrive' %}">
                     <span class="menu-bullet">
                         <span class="bullet bullet-dot"></span>
                     </span>
@@ -182,7 +182,7 @@
             <!--begin:Menu item-->
             <div class="menu-item">
                 <!--begin:Menu link-->
-                <a class="menu-link" href="../apps/chat/group.html">
+                <a class="menu-link" href="{% url 'discussionGroupe' %}">
                     <span class="menu-bullet">
                         <span class="bullet bullet-dot"></span>
                     </span>

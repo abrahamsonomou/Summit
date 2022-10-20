@@ -1,4 +1,4 @@
-from django.urls import path,include
+from django.urls import path,include, re_path
 from .views import *
 
 from rest_framework import routers
@@ -14,6 +14,36 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
     path('',home,name='home'),
+
+    #Etudiant
+    path('dashboardEtudiant/',dashboardEtudiant,name='dashboardEtudiant'),
+    path('profil/',profil,name='profil'),
+    path('acceuil/',acceuil,name='acceuil'),
+    path('mes_objectifs/',mes_objectifs,name='mes_objectifs'),
+    path('mes_cours/',mes_cours,name='mes_cours'),
+    path('calendrier/',calendrier,name='calendrier'),
+    path('contact/',contact,name='contact'),
+    path('discussionPrive/',discussionPrive,name='discussionPrive'),
+    path('discussionGroupe/',discussionGroupe,name='discussionGroupe'),
+    path('aide/',aide,name='aide'),
+
+    #admin
+    path('etudiant/',etudiant,name='etudiant'),
+    path('daschboardAdmin/',daschboardAdmin,name='daschboardAdmin'),
+    path('cours/',cours,name='cours'),
+    path('calendrierAdmin/',calendrierAdmin,name='calendrierAdmin'),
+    path('listeMisionnaire/',listeMisionnaire,name='listeMisionnaire'),
+    path('voirMissionnaire/',voirMissionnaire,name='voirMissionnaire'),
+    path('discussionGroupeAdmin/',discussionGroupeAdmin,name='discussionGroupeAdmin'),
+    path('discussionPriveAdmin/',discussionPriveAdmin,name='discussionPriveAdmin'),
+    path('ajouterContact/',ajouterContact,name='ajouterContact'),
+    path('listeContact/',listeContact,name='listeContact'),
+    # path('/',,name=''),
+
+
+
+
+
 
     path(r'candidat/',PersonneList.as_view(),name='Personne/'),
     path(r'api/(?P<pk>[0-9]+)/$', PersonneListDetail.as_view(),name='candidatdetails/'),

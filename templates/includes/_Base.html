@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -13,12 +14,12 @@
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="static/assets-2/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="{% static 'static/assets-2/media/logos/favicon.ico' %}" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-		<link href="static/assets-2/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="static/assets-2/plugins/custom/vis-timeline/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="static/assets-2/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="static/assets-2/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets-2/plugins/custom/datatables/datatables.bundle.css' %} " rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets-2/plugins/custom/vis-timeline/vis-timeline.bundle.css' %} " rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets-2/plugins/global/plugins.bundle.css' %} " rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets-2/css/style.bundle.css' %} " rel="stylesheet" type="text/css" />
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-5FS8GGP');</script>
 	</head>
 	<body id="kt_app_body" data-kt-app-layout="light-sidebar" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
@@ -55,7 +56,7 @@
 						<!--begin::Mobile logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 							<a href="../index.html" class="d-lg-none">
-								<img alt="Logo" src="/static/assets-2/media/logos/default-small.svg" class="h-30px" />
+								<img alt="Logo" src="assets-2/media/logos/default-small.svg" class="h-30px" />
 							</a>
 						</div>
 						<!--end::Mobile logo-->

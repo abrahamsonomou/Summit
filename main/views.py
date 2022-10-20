@@ -9,26 +9,104 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
+from django import template
 
 # import view sets from the REST framework
 from rest_framework import viewsets
 
 # Create your views here.
+# @login_required
+def home(request):
+    return render(request,'pages/index.html')
+
+@login_required()
+def dashboardEtudiant(request):
+    return render(request,"etudiant/dashboardEtudiant.html")
+
+@login_required()
+def  profil(request):
+    return render(request,"etudiant/profil.html")
+
+@login_required()
+def  mes_objectifs(request):
+    return render(request,"etudiant/mes_objectifs.html")
+
+@login_required()
+def  mes_cours(request):
+    return render(request,"etudiant/mes_cours.html")
+
+@login_required()
+def  contact(request):
+    return render(request,"etudiant/contact.html")
+
+@login_required()
+def  calendrier(request):
+    return render(request,"etudiant/calendrier.html")
+
+@login_required()
+def  aide(request):
+    return render(request,"etudiant/aide.html")
+
+@login_required()
+def  discussionPrive(request):
+    return render(request,"etudiant/discussion/discussionPrive.html")
+
+@login_required()
+def  discussionGroupe(request):
+    return render(request,"etudiant/discussion/discussionGroupe.html")
+
+#admin
+@login_required()
+def etudiant(request):
+    return render(request,"admin/etudiant.html") 
+
+@login_required()
+def daschboardAdmin(request):
+    return render(request,"admin/daschboardAdmin.html")
+
+@login_required()
+def cours(request):
+    return render(request,"admin/cours.html")
+
+
+@login_required()
+def calendrierAdmin(request):
+    return render(request,"admin/calendrierAdmin.html")
+
+@login_required()
+def listeMisionnaire(request):
+    return render(request,"admin/misionnaire/listeMisionnaire.html")
+
+@login_required()
+def voirMissionnaire(request):
+    return render(request,"admin/misionnaire/voirMissionnaire.html")
+
+@login_required()
+def discussionGroupeAdmin(request):
+    return render(request,"admin/discussion/discussionGroupeAdmin.html")
+
+@login_required()
+def discussionPriveAdmin(request):
+    return render(request,"admin/discussion/discussionPriveAdmin.html")
+
+@login_required()
+def ajouterContact(request):
+    return render(request,"admin/contact/ajouterContact.html")
+
+@login_required()
+def listeContact(request):
+    return render(request,"admin/contact/listeContact.html")
+
+@login_required()
+def acceuil(request):
+    return render(request,"pages/acceuil.html")    
+
+
+
+
 class CoursView(viewsets.ModelViewSet):
     serializer_class = CoursSerializer
     queryset = Cours.objects.all()
-
-@login_required
-def home(request):
-    context = {'segment': 'index'}
-
-    html_template = loader.get_template('pages/index.html')
-    return HttpResponse(html_template.render(context, request))
-
-# def home(request):
-#     return render(request,"pages/home.html")
-
-
 
 class PersonneList(generics.ListCreateAPIView):
     queryset=Personne.objects.all()
