@@ -1,5 +1,6 @@
 {% extends 'includes/_Base.html' %}
 {% block title %}Tableau de bord{% endblock title %}
+{% load static %}
 {% block content %}
    <!--begin::Main-->
    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
@@ -266,7 +267,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-6.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-6.jpg' %} " />
                                                 <div class="symbol-badge bg-success start-100 top-100 border-4 h-15px w-15px ms-n2 mt-n2"></div>
                                             </div>
                                             <!--end::Avatar-->
@@ -312,7 +313,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-1.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-1.jpg' %} " />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -334,7 +335,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-5.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-5.jpg' %} " />
                                                 <div class="symbol-badge bg-success start-100 top-100 border-4 h-15px w-15px ms-n2 mt-n2"></div>
                                             </div>
                                             <!--end::Avatar-->
@@ -357,7 +358,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-25.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-25.jpg' %} " />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -401,7 +402,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-9.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-9.jpg' %} " />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -467,7 +468,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-23.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-23.jpg' %} " />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -511,7 +512,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-12.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-12.jpg' %} " />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -556,7 +557,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-13.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-13.jpg' %} " />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -601,7 +602,7 @@
                                         <div class="d-flex align-items-center">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-40px symbol-circle">
-                                                <img alt="Pic" src="../../assets/media/avatars/300-21.jpg" />
+                                                <img alt="Pic" src="{% static 'assets-2/media/avatars/300-21.jpg' %} " />
                                                 <div class="symbol-badge bg-success start-100 top-100 border-4 h-15px w-15px ms-n2 mt-n2"></div>
                                             </div>
                                             <!--end::Avatar-->
@@ -659,7 +660,7 @@
                                         <!--begin::Image input wrapper-->
                                         <div class="mt-1">
                                             <!--begin::Image placeholder-->
-                                            <style>.image-input-placeholder { background-image: url('../../assets/media/svg/files/blank-image.svg'); } [data-theme="dark"] .image-input-placeholder { background-image: url('../../assets/media/svg/files/blank-image-dark.svg'); }</style>
+                                            <style>.image-input-placeholder { background-image: url('{% static 'assets/media/svg/files/blank-image.svg' %} '); } [data-theme="dark"] .image-input-placeholder { background-image: url('../../assets/media/svg/files/blank-image-dark.svg'); }</style>
                                             <!--end::Image placeholder-->
                                             <!--begin::Image input-->
                                             <div class="image-input image-input-outline image-input-placeholder image-input-empty image-input-empty" data-kt-image-input="true">

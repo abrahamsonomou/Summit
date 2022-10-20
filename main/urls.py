@@ -38,6 +38,7 @@ urlpatterns = [
     path('discussionPriveAdmin/',discussionPriveAdmin,name='discussionPriveAdmin'),
     path('ajouterContact/',ajouterContact,name='ajouterContact'),
     path('listeContact/',listeContact,name='listeContact'),
+    path('settingEtudiant/',settingEtudiant,name='settingEtudiant'),
     # path('/',,name=''),
 
 

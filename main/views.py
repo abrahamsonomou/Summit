@@ -15,7 +15,7 @@ from django import template
 from rest_framework import viewsets
 
 # Create your views here.
-# @login_required
+@login_required
 def home(request):
     return render(request,'pages/index.html')
 
@@ -54,6 +54,10 @@ def  discussionPrive(request):
 @login_required()
 def  discussionGroupe(request):
     return render(request,"etudiant/discussion/discussionGroupe.html")
+
+@login_required()
+def settingEtudiant(request):
+    return render(request,"etudiant/settingEtudiant.html")
 
 #admin
 @login_required()
@@ -96,6 +100,9 @@ def ajouterContact(request):
 @login_required()
 def listeContact(request):
     return render(request,"admin/contact/listeContact.html")
+
+
+
 
 @login_required()
 def acceuil(request):
