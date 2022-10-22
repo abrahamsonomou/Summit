@@ -1,8 +1,8 @@
 {% extends 'includes/_Base.html' %}
 {% block title %}Tableau de bord{% endblock title %}
 {% block content %}
-   <!--begin::Main-->
-   <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+ <!--begin::Main-->
+ <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
     <!--begin::Content wrapper-->
     <div class="d-flex flex-column flex-column-fluid">
         <!--begin::Toolbar-->
@@ -12,107 +12,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Calendar</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Calendrier</h1>
                     <!--end::Title-->
                 </div>
                 <!--end::Page title-->
                 <!--begin::Actions-->
                 <div class="d-flex align-items-center gap-2 gap-lg-3">
-                    <!--begin::Filter menu-->
-                    <div class="m-0">
-                        <!--begin::Menu toggle-->
-                        <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                        <span class="svg-icon svg-icon-6 svg-icon-muted me-1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
-                            </svg>
-                        </span>
-                        <!--end::Svg Icon-->Filter</a>
-                        <!--end::Menu toggle-->
-                        <!--begin::Menu 1-->
-                        <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_634b08ddb258c">
-                            <!--begin::Header-->
-                            <div class="px-7 py-5">
-                                <div class="fs-5 text-dark fw-bold">Filter Options</div>
-                            </div>
-                            <!--end::Header-->
-                            <!--begin::Menu separator-->
-                            <div class="separator border-gray-200"></div>
-                            <!--end::Menu separator-->
-                            <!--begin::Form-->
-                            <div class="px-7 py-5">
-                                <!--begin::Input group-->
-                                <div class="mb-10">
-                                    <!--begin::Label-->
-                                    <label class="form-label fw-semibold">Status:</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <div>
-                                        <select class="form-select form-select-solid" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_634b08ddb258c" data-allow-clear="true">
-                                            <option></option>
-                                            <option value="1">Approved</option>
-                                            <option value="2">Pending</option>
-                                            <option value="2">In Process</option>
-                                            <option value="2">Rejected</option>
-                                        </select>
-                                    </div>
-                                    <!--end::Input-->
-                                </div>
-                                <!--end::Input group-->
-                                <!--begin::Input group-->
-                                <div class="mb-10">
-                                    <!--begin::Label-->
-                                    <label class="form-label fw-semibold">Member Type:</label>
-                                    <!--end::Label-->
-                                    <!--begin::Options-->
-                                    <div class="d-flex">
-                                        <!--begin::Options-->
-                                        <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="checkbox" value="1" />
-                                            <span class="form-check-label">Author</span>
-                                        </label>
-                                        <!--end::Options-->
-                                        <!--begin::Options-->
-                                        <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                            <input class="form-check-input" type="checkbox" value="2" checked="checked" />
-                                            <span class="form-check-label">Customer</span>
-                                        </label>
-                                        <!--end::Options-->
-                                    </div>
-                                    <!--end::Options-->
-                                </div>
-                                <!--end::Input group-->
-                                <!--begin::Input group-->
-                                <div class="mb-10">
-                                    <!--begin::Label-->
-                                    <label class="form-label fw-semibold">Notifications:</label>
-                                    <!--end::Label-->
-                                    <!--begin::Switch-->
-                                    <div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                                        <input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked" />
-                                        <label class="form-check-label">Enabled</label>
-                                    </div>
-                                    <!--end::Switch-->
-                                </div>
-                                <!--end::Input group-->
-                                <!--begin::Actions-->
-                                <div class="d-flex justify-content-end">
-                                    <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-                                    <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-                                </div>
-                                <!--end::Actions-->
-                            </div>
-                            <!--end::Form-->
-                        </div>
-                        <!--end::Menu 1-->
-                    </div>
-                    <!--end::Filter menu-->
-                    <!--begin::Secondary button-->
-                    <!--end::Secondary button-->
-                    <!--begin::Primary button-->
-                    <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Create</a>
-                    <!--end::Primary button-->
+                
                 </div>
                 <!--end::Actions-->
             </div>
@@ -127,7 +33,7 @@
                 <div class="card">
                     <!--begin::Card header-->
                     <div class="card-header">
-                        <h2 class="card-title fw-bold">Calendar</h2>
+                        <h2 class="card-title fw-bold">Calendrier</h2>
                         <div class="card-toolbar">
                             <button class="btn btn-flex btn-primary" data-kt-calendar="add">
                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
@@ -137,7 +43,7 @@
                                     <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="currentColor" />
                                 </svg>
                             </span>
-                            <!--end::Svg Icon-->Add Event</button>
+                            <!--end::Svg Icon-->Ajouter évènement</button>
                         </div>
                     </div>
                     <!--end::Card header-->
@@ -162,7 +68,7 @@
                                 <!--begin::Modal header-->
                                 <div class="modal-header">
                                     <!--begin::Modal title-->
-                                    <h2 class="fw-bold" data-kt-calendar="title">Add Event</h2>
+                                    <h2 class="fw-bold" data-kt-calendar="title">Ajouter évènement</h2>
                                     <!--end::Modal title-->
                                     <!--begin::Close-->
                                     <div class="btn btn-icon btn-sm btn-active-icon-primary" id="kt_modal_add_event_close">
@@ -183,7 +89,7 @@
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-9">
                                         <!--begin::Label-->
-                                        <label class="fs-6 fw-semibold required mb-2">Event Name</label>
+                                        <label class="fs-6 fw-semibold required mb-2">Nom de l'évènement</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <input type="text" class="form-control form-control-solid" placeholder="" name="calendar_event_name" />
@@ -193,7 +99,7 @@
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-9">
                                         <!--begin::Label-->
-                                        <label class="fs-6 fw-semibold mb-2">Event Description</label>
+                                        <label class="fs-6 fw-semibold mb-2">Description de l'évènement</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <input type="text" class="form-control form-control-solid" placeholder="" name="calendar_event_description" />
@@ -203,7 +109,7 @@
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-9">
                                         <!--begin::Label-->
-                                        <label class="fs-6 fw-semibold mb-2">Event Location</label>
+                                        <label class="fs-6 fw-semibold mb-2">Principe de l'évènement<</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <input type="text" class="form-control form-control-solid" placeholder="" name="calendar_event_location" />
@@ -215,7 +121,7 @@
                                         <!--begin::Checkbox-->
                                         <label class="form-check form-check-custom form-check-solid">
                                             <input class="form-check-input" type="checkbox" value="" id="kt_calendar_datepicker_allday" />
-                                            <span class="form-check-label fw-semibold" for="kt_calendar_datepicker_allday">All Day</span>
+                                            <span class="form-check-label fw-semibold" for="kt_calendar_datepicker_allday">Tous les jours</span>
                                         </label>
                                         <!--end::Checkbox-->
                                     </div>
@@ -225,20 +131,20 @@
                                         <div class="col">
                                             <div class="fv-row mb-9">
                                                 <!--begin::Label-->
-                                                <label class="fs-6 fw-semibold mb-2 required">Event Start Date</label>
+                                                <label class="fs-6 fw-semibold mb-2 required">Date de début</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input class="form-control form-control-solid" name="calendar_event_start_date" placeholder="Pick a start date" id="kt_calendar_datepicker_start_date" />
+                                                <input class="form-control form-control-solid" name="calendar_event_start_date" placeholder="Donner une date de début" id="kt_calendar_datepicker_start_date" />
                                                 <!--end::Input-->
                                             </div>
                                         </div>
                                         <div class="col" data-kt-calendar="datepicker">
                                             <div class="fv-row mb-9">
                                                 <!--begin::Label-->
-                                                <label class="fs-6 fw-semibold mb-2">Event Start Time</label>
+                                                <label class="fs-6 fw-semibold mb-2">Heure de début</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input class="form-control form-control-solid" name="calendar_event_start_time" placeholder="Pick a start time" id="kt_calendar_datepicker_start_time" />
+                                                <input class="form-control form-control-solid" name="calendar_event_start_time" placeholder="Donner une heure de début" id="kt_calendar_datepicker_start_time" />
                                                 <!--end::Input-->
                                             </div>
                                         </div>
@@ -249,20 +155,20 @@
                                         <div class="col">
                                             <div class="fv-row mb-9">
                                                 <!--begin::Label-->
-                                                <label class="fs-6 fw-semibold mb-2 required">Event End Date</label>
+                                                <label class="fs-6 fw-semibold mb-2 required">Date de fin</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input class="form-control form-control-solid" name="calendar_event_end_date" placeholder="Pick a end date" id="kt_calendar_datepicker_end_date" />
+                                                <input class="form-control form-control-solid" name="calendar_event_end_date" placeholder="Donner une date de fin" id="kt_calendar_datepicker_end_date" />
                                                 <!--end::Input-->
                                             </div>
                                         </div>
                                         <div class="col" data-kt-calendar="datepicker">
                                             <div class="fv-row mb-9">
                                                 <!--begin::Label-->
-                                                <label class="fs-6 fw-semibold mb-2">Event End Time</label>
+                                                <label class="fs-6 fw-semibold mb-2">Heure de fin</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <input class="form-control form-control-solid" name="calendar_event_end_time" placeholder="Pick a end time" id="kt_calendar_datepicker_end_time" />
+                                                <input class="form-control form-control-solid" name="calendar_event_end_time" placeholder="Donner une heure de fin" id="kt_calendar_datepicker_end_time" />
                                                 <!--end::Input-->
                                             </div>
                                         </div>
@@ -273,17 +179,16 @@
                                 <!--begin::Modal footer-->
                                 <div class="modal-footer flex-center">
                                     <!--begin::Button-->
-                                    <button type="reset" id="kt_modal_add_event_cancel" class="btn btn-light me-3">Cancel</button>
+                                    <button type="reset" id="kt_modal_add_event_cancel" class="btn btn-light me-3">Annuler</button>
                                     <!--end::Button-->
                                     <!--begin::Button-->
                                     <button type="button" id="kt_modal_add_event_submit" class="btn btn-primary">
-                                        <span class="indicator-label">Submit</span>
-                                        <span class="indicator-progress">Please wait... 
+                                        <span class="indicator-label">Enregistrer</span>
+                                        <span class="indicator-progress">Patienter s'il vous plait... 
                                         <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                     </button>
                                     <!--end::Button-->
                                 </div>
-                                <!--end::Modal footer-->
                             </form>
                             <!--end::Form-->
                         </div>
