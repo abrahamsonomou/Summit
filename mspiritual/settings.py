@@ -70,6 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mspiritual.urls'
@@ -106,7 +107,7 @@ WSGI_APPLICATION = 'mspiritual.wsgi.application'
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME':'db_summit',
+'NAME':'db_summit1',
 'USER': 'user_summit',
 'PASSWORD': 'password',
 'HOST':'localhost',
@@ -136,7 +137,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+
+LANGUAGE_CODE = 'fr-Fr'
 
 TIME_ZONE = 'UTC'
 
@@ -158,12 +161,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# AUTH_USER_MODEL = 'authentication.User' 
+AUTH_USER_MODEL = 'authentication.User' 
 
 LOGIN_URL = 'accounts/login'
 LOGOUT_URL = 'accounts/logout'

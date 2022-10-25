@@ -41,13 +41,12 @@ urlpatterns = [
     path('settingEtudiant/',settingEtudiant,name='settingEtudiant'),
     # path('/',,name=''),
 
+    path(r'candidat/',EtudiantList.as_view(),name='Etudiant/'),
+    path(r'api/(?P<pk>[0-9]+)/$', EtudiantListDetail.as_view(),name='candidatdetails/'),
 
+    path(r'candidat/',MissionnaireList.as_view(),name='Missionnaire/'),
+    path(r'api/(?P<pk>[0-9]+)/$', MissionnaireListDetail.as_view(),name='candidatdetails/'),
 
-
-
-
-    path(r'candidat/',PersonneList.as_view(),name='Personne/'),
-    path(r'api/(?P<pk>[0-9]+)/$', PersonneListDetail.as_view(),name='candidatdetails/'),
 
     path(r'cours/',CoursList.as_view(),name='cours/'),
     path(r'api/(?P<pk>[0-9]+)/$', CoursListDetail.as_view(),name='coursdetails/'),

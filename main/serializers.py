@@ -1,6 +1,7 @@
 from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 from .models import *
+from authentication.models import *
 
 #serialisation de la classe Niveau
 class NiveauSerializer(ModelSerializer):
@@ -8,10 +9,16 @@ class NiveauSerializer(ModelSerializer):
         model=Niveau
         fields='__all__' 
 
-#serialisation de la classe Personne
-class PersonneSerializer(ModelSerializer):
+#serialisation de la classe Etudiant
+class EtudiantSerializer(ModelSerializer):
     class Meta:
-        model=Personne
+        model=Etudiant
+        fields='__all__'
+
+#serialisation de la classe Missionnaire
+class MissionnaireSerializer(ModelSerializer):
+    class Meta:
+        model=Missionnaire
         fields='__all__'
 
 #serialisation de la classe Cours

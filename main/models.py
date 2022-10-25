@@ -1,9 +1,8 @@
 from email.policy import default
 from random import choices
 from secrets import choice
-from tabnanny import verbose
 from django.db import models
-from django.contrib.auth.models import User
+from authentication.models import User
 import uuid
 from django.template.defaultfilters import slugify
 from django.urls import reverse
@@ -19,34 +18,6 @@ class BaseModel(models.Model):
     class Meta:
         abstract=True
 
-class Personne(BaseModel):
-    CHOIX_CIVILITE=(
-    ('celibataire','Celibataire'),
-    ('marie','Marié(e)'),
-    ('divorce','divorcé(e)',)
-    )
-
-    CHOIX_SEXE=(
-    ('homme','HOMME'),
-    ('femme','FEMME'),
-    )
-    telephone=PhoneNumberField(null=True,blank=True,unique=True)
-    sexe=models.CharField(choices=CHOIX_SEXE,default="homme", blank=True,null=True,max_length=200)
-    civilite=models.CharField(choices=CHOIX_CIVILITE,default='celibataire', blank=True,null=True,max_length=200)
-    profession=models.CharField(blank=True,null=True,max_length=200)
-    addresse=models.CharField(blank=True,null=True,max_length=200)
-    # =models.CharField(blank=True,null=True,max_length=200)
-    photo=models.ImageField(upload_to='compte',blank=True,null=True)
-    description=models.TextField(blank=True,null=True)
-    user=models.ForeignKey(User,on_delete=models.CASCADE)
-    status=models.BooleanField(default='True')
-
-    class Meta:
-        verbose_name="Personne évangelisée"
-
-    def __str__(self) -> str:
-        return self.user.username
-
 class Niveau(BaseModel):
     titre=models.CharField(max_length=200)
 
@@ -59,7 +30,6 @@ class Niveau(BaseModel):
 
 class Cours(BaseModel):
     titre=models.CharField(max_length=100)
-    slug=models.SlugField(max_length=200)
     resume=models.TextField(max_length=200,blank=True,null=True)
     contenu=QuillField(blank=True,null=True,max_length=200)
     image=models.ImageField(upload_to='cours',blank=True,null=True)
@@ -73,13 +43,6 @@ class Cours(BaseModel):
 
     def __str__(self) -> str:
         return self.titre
-
-    def save(self,*args,**kwargs):
-        if not self.slug:
-            self.slug=slugify(self.titre)
-        
-        super().save(*args,**kwargs)
-
 
 class Commentaire(BaseModel):
     cours=models.ForeignKey(Cours,on_delete=models.SET_NULL,null=True,blank=True,related_name='fk_blog_comment')
@@ -112,6 +75,30 @@ class Rapport(BaseModel):
         verbose_name = 'Rapport'
         verbose_name_plural = 'Rapports'
     
+    def __str__(self) -> str:
+        return self.titre
+
+class Jour(BaseModel):
+    titre=models.CharField(max_length=200)
+
+    class Meta:
+        verbose_name="Jour"
+
+    def __str__(self) -> str:
+        return self.titre
+
+class Objectif(BaseModel):
+    titre=models.CharField(max_length=100)
+    contenu=models.TextField(max_length=200,blank=True,null=True)
+    etudiant=models.ForeignKey(User,on_delete=models.CASCADE)
+    jour=models.ForeignKey(Jour,on_delete=models.CASCADE)
+    heure=models.TimeField(max_length=100)
+
+    class Meta:
+        ordering=['-created']
+        verbose_name="Objectif"
+        verbose_name_plural = 'Objectifs'
+
     def __str__(self) -> str:
         return self.titre
 

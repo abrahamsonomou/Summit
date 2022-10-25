@@ -62,7 +62,12 @@ def settingEtudiant(request):
 #admin
 @login_required()
 def etudiant(request):
-    return render(request,"admin/etudiant.html") 
+    # etudiants=User.objects.filter(is_etudiant=True)
+    etudiants=Etudiant.objects.all()
+    context={
+        'etudiants':etudiants
+    }
+    return render(request,"admin/etudiant.html",context) 
 
 @login_required()
 def daschboardAdmin(request):
@@ -79,7 +84,11 @@ def calendrierAdmin(request):
 
 @login_required()
 def listeMisionnaire(request):
-    return render(request,"admin/misionnaire/listeMisionnaire.html")
+    missionnaires=Missionnaire.objects.all()
+    context={
+        'missionnaires':missionnaires
+    }
+    return render(request,"admin/misionnaire/listeMisionnaire.html",context)
 
 @login_required()
 def voirMissionnaire(request):
@@ -115,14 +124,26 @@ class CoursView(viewsets.ModelViewSet):
     serializer_class = CoursSerializer
     queryset = Cours.objects.all()
 
-class PersonneList(generics.ListCreateAPIView):
-    queryset=Personne.objects.all()
-    serializer_class=PersonneSerializer
+
+#rest framework
+class MissionnaireList(generics.ListCreateAPIView):
+    queryset=Missionnaire.objects.all()
+    serializer_class=MissionnaireSerializer
     permission_classes = [IsAdminUser]
     
-class PersonneListDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset=Personne.objects.all()
-    serializer_class=PersonneSerializer
+class MissionnaireListDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset=Missionnaire.objects.all()
+    serializer_class=MissionnaireSerializer
+    permission_classes = [IsAdminUser]
+
+class EtudiantList(generics.ListCreateAPIView):
+    queryset=Etudiant.objects.all()
+    serializer_class=EtudiantSerializer
+    permission_classes = [IsAdminUser]
+    
+class EtudiantListDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset=Etudiant.objects.all()
+    serializer_class=EtudiantSerializer
     permission_classes = [IsAdminUser]
 
 class CoursList(generics.ListCreateAPIView):

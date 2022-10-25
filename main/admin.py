@@ -6,15 +6,10 @@ from .models import *
 @admin.register(Cours)
 class CoursAdmin(admin.ModelAdmin):
     list_display=('titre','created',)
-    prepopulated_fields={'slug':('titre',)}
 
 @admin.register(Niveau)
 class NiveauAdmin(admin.ModelAdmin):
     list_display=('titre','created',)
-
-@admin.register(Personne)
-class PersonneAdmin(admin.ModelAdmin):
-    list_display=('user','sexe','created',)
 
 @admin.register(Commentaire)
 class CommentaireAdmin(admin.ModelAdmin):
@@ -25,3 +20,7 @@ class RapportAdmin(admin.ModelAdmin):
     list_display=('titre','personne','created',)
 
 admin.site.register(Contact)
+# admin.site.register(Etudiant)
+# admin.site.register(Missionnaire)
+admin.site.register(Objectif)
+# admin.site.register()

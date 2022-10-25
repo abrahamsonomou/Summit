@@ -30,10 +30,11 @@
 			<!--begin::Menu-->
 			<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
 				{% if request.user.is_authenticated %}
-
+				{% comment %} {% if user.is_etudiant %} {% endcomment %}
 				{% include "includes/_menuEtudiant.html" %}
-
+				{% comment %} {% elif user.is_missionnaire %} {% endcomment %}
 				{% include "includes/_menuAdmin.html" %}
+				{% comment %} {% endif %} {% endcomment %}
 				
           		{% endif %}
 				
